@@ -17,7 +17,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "L'ARTISTA - Portfolio",
+  title: "Angga Keren - Portfolio",
   description: "The intersection of Renaissance form and contemporary digital utility.",
 };
 

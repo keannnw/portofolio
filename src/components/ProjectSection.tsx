@@ -37,15 +37,15 @@ export default function ProjectSection() {
     let projectCtx = gsap.context(() => {
       const gallery = projectGalleryRef.current;
       if (gallery) {
-        const totalScroll = gallery.scrollWidth - window.innerWidth + 100;
+        const getScrollAmount = () => Math.max(0, gallery.scrollWidth - window.innerWidth + 100);
 
         gsap.to(gallery, {
-          x: () => -totalScroll,
+          x: () => -getScrollAmount(),
           ease: "none",
           scrollTrigger: {
             trigger: projectSectionRef.current,
             start: "top top",
-            end: () => `+=${totalScroll}`,
+            end: () => `+=${getScrollAmount()}`,
             pin: true,
             scrub: 1,
             invalidateOnRefresh: true,
@@ -58,15 +58,15 @@ export default function ProjectSection() {
     let certCtx = gsap.context(() => {
       const gallery = certGalleryRef.current;
       if (gallery) {
-        const totalScroll = gallery.scrollWidth - window.innerWidth + 100;
+        const getScrollAmount = () => Math.max(0, gallery.scrollWidth - window.innerWidth + 100);
 
         gsap.to(gallery, {
-          x: () => -totalScroll,
+          x: () => -getScrollAmount(),
           ease: "none",
           scrollTrigger: {
             trigger: certSectionRef.current,
             start: "top top",
-            end: () => `+=${totalScroll}`,
+            end: () => `+=${getScrollAmount()}`,
             pin: true,
             scrub: 1,
             invalidateOnRefresh: true,
@@ -75,9 +75,21 @@ export default function ProjectSection() {
       }
     }, certSectionRef);
 
+    // Refresh ScrollTrigger after elements are fully loaded and layouts are settled
+    const handleLoad = () => {
+      ScrollTrigger.refresh();
+    };
+    window.addEventListener("load", handleLoad);
+
+    const timer = setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 500);
+
     return () => {
       projectCtx.revert();
       certCtx.revert();
+      window.removeEventListener("load", handleLoad);
+      clearTimeout(timer);
     };
   }, []);
 
@@ -98,7 +110,7 @@ export default function ProjectSection() {
       </motion.div>
 
       {/* --- DESKTOP PROJECTS (GSAP ScrollTrigger) --- */}
-      <section ref={projectSectionRef} className="hidden md:flex h-screen flex-col justify-center overflow-hidden bg-background">
+      <section ref={projectSectionRef} className="hidden md:flex h-screen flex-col justify-center overflow-hidden bg-transparent">
         <div className="px-margin-desktop w-full max-w-[1440px] mx-auto flex justify-between items-end mb-12">
           <h2 className="font-display-lg text-display-lg text-primary">Selected Archives</h2>
           <p className="font-label-md text-label-md uppercase tracking-[0.3em] text-outline max-w-xs text-right">
@@ -139,7 +151,7 @@ export default function ProjectSection() {
       </section>
 
       {/* --- MOBILE PROJECTS (Embla Carousel) --- */}
-      <section className="md:hidden py-section-gap overflow-hidden bg-background">
+      <section className="md:hidden py-section-gap overflow-hidden bg-transparent">
         <div className="px-margin-mobile mb-12">
           <h2 className="font-display-lg text-4xl text-primary mb-4">Selected Archives</h2>
         </div>
@@ -176,9 +188,9 @@ export default function ProjectSection() {
       </section>
 
       {/* --- DESKTOP CERTIFICATIONS (GSAP ScrollTrigger) --- */}
-      <section ref={certSectionRef} className="hidden md:flex h-[80vh] flex-col justify-center overflow-hidden bg-surface-container-low border-t border-gold/20">
+      <section ref={certSectionRef} className="hidden md:flex h-[80vh] flex-col justify-center overflow-hidden bg-surface-container-low/70 backdrop-blur-sm border-t border-gold/20">
         <div className="px-margin-desktop w-full max-w-[1440px] mx-auto mb-12">
-          <h4 className="font-label-md text-label-md uppercase tracking-[0.4em] text-primary">Serification</h4>
+          <h4 className="font-label-md text-label-md uppercase tracking-[0.4em] text-primary">Certifications</h4>
         </div>
         <div className="flex pl-margin-desktop items-center h-80" ref={certGalleryRef}>
           {certifications.map((cert, idx) => (
@@ -199,9 +211,9 @@ export default function ProjectSection() {
       </section>
 
       {/* --- MOBILE CERTIFICATIONS (Embla Carousel) --- */}
-      <section className="md:hidden py-24 overflow-hidden bg-surface-container-low border-t border-gold/20">
+      <section className="md:hidden py-24 overflow-hidden bg-surface-container-low/70 backdrop-blur-sm border-t border-gold/20">
         <div className="px-margin-mobile mb-12">
-          <h4 className="font-label-md text-label-md uppercase tracking-[0.4em] text-primary">Serification</h4>
+          <h4 className="font-label-md text-label-md uppercase tracking-[0.4em] text-primary">Certifications</h4>
         </div>
         <div className="overflow-hidden" ref={emblaRefCerts}>
           <div className="flex touch-pan-y pl-margin-mobile">

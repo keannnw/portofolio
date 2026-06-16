@@ -1,13 +1,17 @@
+const uangku = "/images/uangku.jpg";
+const cleenbee = "/images/cleenbee.png";
+const meetly = "/images/meetly.png";
+
 export const owner = {
   fullName: "Ketut Angga Wicaksana",
   nickname: "Angga",
   role: "Fullstack Developer & Information Technology Student",
   university: "Telkom University Bandung",
-  major: "S1 Teknologi Informasi",
+  major: "Bachelor of Information Technology",
   status: "Active Student",
   bio: [
-    "Saya Ketut Angga Wicaksana, mahasiswa S1 Teknologi Informasi di Telkom University Bandung yang memiliki ketertarikan sebagai Fullstack Developer.",
-    "Saya memiliki passion dalam membangun produk digital end-to-end — dari sisi frontend yang intuitif hingga backend yang robust dan skalabel. Selalu antusias mengeksplorasi teknologi baru dan berkolaborasi dalam tim yang kreatif.",
+    "I am Ketut Angga Wicaksana, an Information Technology undergraduate student at Telkom University Bandung with a strong passion for Fullstack Development.",
+    "I have a passion for building end-to-end digital products — from intuitive frontends to robust and scalable backends. I am always enthusiastic about exploring new technologies and collaborating within creative teams.",
   ],
   quote: "Art is not what you see, but what you make others see through the lens of timeless restraint.",
   image: "/images/portrait.jpg",
@@ -34,10 +38,10 @@ export const projects = [
     id: "project-1",
     title: "UANGKU",
     stack: ["Java", "Spring Boot", "MySQL", "Thymeleaf"],
-    description: "Aplikasi manajemen keuangan personal untuk mencatat pemasukan, pengeluaran, dan melihat laporan keuangan secara digital.",
+    description: "A personal finance management application to record income and expenses, and view digital financial reports.",
     category: "Web App",
     status: "Completed",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDo2B9mGfiTARy8Y6XuMWNlBGKJe9_R2dwzCNVmdgjHeh2sZu0fg0ebMGh5britCC4zFxOLP83NMs6-yJmjKJaJlgxxsZjhsUnm35KtPvv-rekjiYcsgouKc01xfcBdLFYSa0FJVNmZnvS84Ub_j6UP3llveWXCjYpEl_-sLKZCUohcTaL2Px1mR0cpjsNqhXMPfZHXZ7vn9dpVO0Iuu6iKNE-TzoiE8wu1ZgBV5_9O6mGsKFAK0SOvNz2yjX-dU5iWPpQAlrB1JkHr", // Placeholder, you can update
+    image: uangku,
     link: "#",
     size: "large",
   },
@@ -45,10 +49,10 @@ export const projects = [
     id: "project-2",
     title: "MEETLY",
     stack: ["Laravel", "Vue.js", "TypeScript", "MySQL", "Inertia.js", "Tailwind CSS"],
-    description: "Platform media sosial modern untuk berbagi postingan, berinteraksi dengan pengguna lain, serta dilengkapi fitur pesan, notifikasi, dan sistem moderasi konten.",
+    description: "A modern social media platform for sharing posts and interacting with other users, featuring messaging, notifications, and a content moderation system.",
     category: "Web App",
     status: "Completed",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDixAPnNLVuBXK3jOWy7sDAc7lvB9eDgZywvfpcTrRfe0rwPW2W7BxzeIem2DGFLt2fY4gmF9KQvTPq3xYuuiXkkmrL1mS1VLwbL3m0k0IzjNqgD97Z3WmjZ-EPSIl7P1AkxdrNRfZy63g9MZon4dWelk0N24Q0M2pjWqlmCjrVEAfKuxPG1yiY6-X3FAyl-90rxdOYIikwjzToaC-PKcDioIfgCsul8D8dQbZQ4CU3UYCX1feeqJpzXTXRGgfrKmta5W0jkpZWVkwR",
+    image: meetly,
     link: "#",
     size: "small",
   },
@@ -56,10 +60,10 @@ export const projects = [
     id: "project-3",
     title: "CLEANBEE",
     stack: ["Flutter", "Dart", "Firebase", "Firestore", "Firebase Auth"],
-    description: "Aplikasi mobile untuk pemesanan layanan kebersihan asrama mahasiswa, dilengkapi fitur penjadwalan, chat real-time, notifikasi, dan sistem rating ulasan.",
+    description: "A mobile application for booking student dormitory cleaning services, equipped with scheduling, real-time chat, notifications, and a rating and review system.",
     category: "Mobile App",
     status: "Completed",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDo2B9mGfiTARy8Y6XuMWNlBGKJe9_R2dwzCNVmdgjHeh2sZu0fg0ebMGh5britCC4zFxOLP83NMs6-yJmjKJaJlgxxsZjhsUnm35KtPvv-rekjiYcsgouKc01xfcBdLFYSa0FJVNmZnvS84Ub_j6UP3llveWXCjYpEl_-sLKZCUohcTaL2Px1mR0cpjsNqhXMPfZHXZ7vn9dpVO0Iuu6iKNE-TzoiE8wu1ZgBV5_9O6mGsKFAK0SOvNz2yjX-dU5iWPpQAlrB1JkHr",
+    image: cleenbee,
     link: "#",
     size: "small",
   },
@@ -67,7 +71,7 @@ export const projects = [
     id: "project-4",
     title: "PROFILE COMPANY",
     stack: ["Next.js", "TypeScript", "Laravel API"],
-    description: "Website company profile modern dengan CMS headless dan performa Lighthouse score 95+.",
+    description: "A modern company profile website featuring a headless CMS and a 95+ Lighthouse score.",
     category: "Web App",
     status: "Completed",
     image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDixAPnNLVuBXK3jOWy7sDAc7lvB9eDgZywvfpcTrRfe0rwPW2W7BxzeIem2DGFLt2fY4gmF9KQvTPq3xYuuiXkkmrL1mS1VLwbL3m0k0IzjNqgD97Z3WmjZ-EPSIl7P1AkxdrNRfZy63g9MZon4dWelk0N24Q0M2pjWqlmCjrVEAfKuxPG1yiY6-X3FAyl-90rxdOYIikwjzToaC-PKcDioIfgCsul8D8dQbZQ4CU3UYCX1feeqJpzXTXRGgfrKmta5W0jkpZWVkwR",
@@ -77,8 +81,8 @@ export const projects = [
 ];
 
 export const certifications = [
-  { name: "Junior Web Developer", issuer: "BNSP (Badan Nasional Sertifikasi Profesi)", year: "2024", icon: "workspace_premium" },
-  { name: "React – The Complete Guide", issuer: "Udemy", year: "2023", icon: "verified" },
+  { name: "Introduction to Cyber Security", issuer: "Cisco", year: "2025", icon: "workspace_premium" },
+  { name: "Completion of Bootcamp", issuer: "Cisometic Academy", year: "2025", icon: "verified" },
   { name: "Back End Development & APIs", issuer: "freeCodeCamp", year: "2023", icon: "stars" },
   { name: "Google IT Support Professional", issuer: "Google / Coursera", year: "2023", icon: "military_tech" },
   { name: "Flutter & Dart – The Complete Guide", issuer: "Udemy", year: "2024", icon: "laptop_chromebook" },
@@ -86,9 +90,9 @@ export const certifications = [
 ];
 
 export const contacts = {
-  heading: "Mari Berkolaborasi",
-  subtext: "Terbuka untuk project freelance, kolaborasi, maupun diskusi seputar teknologi. Jangan ragu untuk menghubungi!",
-  buttonText: "Kirim Pesan",
+  heading: "Let's Collaborate",
+  subtext: "Open for freelance projects, collaborations, or tech discussions. Feel free to reach out!",
+  buttonText: "Send Message",
   socials: {
     github: "https://github.com/ketutanggawicaksana",
     linkedin: "https://www.linkedin.com/in/ketut-angga-wicaksana-8a0946280/",

@@ -77,7 +77,7 @@ export default function ContactSection() {
 
         <div className="mt-24 flex justify-center flex-wrap gap-8 md:gap-12">
           {contacts.socials.github && (
-            <a className="group flex flex-col items-center" href={contacts.socials.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <a className="group flex flex-col items-center" href={'https://github.com/keannnw'} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <Code className="text-on-surface-variant group-hover:text-gold transition-all duration-300 w-8 h-8" />
               <span className="font-label-md text-[10px] uppercase mt-2 tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
                 GitHub
@@ -85,7 +85,7 @@ export default function ContactSection() {
             </a>
           )}
           {contacts.socials.linkedin && (
-            <a className="group flex flex-col items-center" href={contacts.socials.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <a className="group flex flex-col items-center" href={'https://www.linkedin.com/in/ketut-angga-wicaksana-8a0946280/'} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <Globe className="text-on-surface-variant group-hover:text-gold transition-all duration-300 w-8 h-8" />
               <span className="font-label-md text-[10px] uppercase mt-2 tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
                 LinkedIn
@@ -93,7 +93,7 @@ export default function ContactSection() {
             </a>
           )}
           {contacts.socials.instagram && (
-            <a className="group flex flex-col items-center" href={contacts.socials.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <a className="group flex flex-col items-center" href={'https://www.instagram.com/nggaa.w?igsh=aHE3ZXY3c3RreHVo'} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
               <Camera className="text-on-surface-variant group-hover:text-gold transition-all duration-300 w-8 h-8" />
               <span className="font-label-md text-[10px] uppercase mt-2 tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
                 Instagram
