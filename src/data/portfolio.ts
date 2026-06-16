@@ -13,7 +13,7 @@ export const owner = {
     "I am Ketut Angga Wicaksana, an Information Technology undergraduate student at Telkom University Bandung with a strong passion for Fullstack Development.",
     "I have a passion for building end-to-end digital products from intuitive frontends to robust and scalable backends. I am always enthusiastic about exploring new technologies and collaborating within creative teams.",
   ],
-  quote: "Art is not what you see, but what you make others see through the lens of timeless restraint.",
+  quote: "Being invincible isn't about never falling. It's about rising every time the world tries to break you.",
   image: "/images/portrait.jpg",
 };
 
